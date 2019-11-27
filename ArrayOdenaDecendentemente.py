@@ -24,7 +24,7 @@ class BusquedaBinaria:
             # si el valor del punto medio es menor que clave, sigue buscando
             # en el segmento de la derecha: [medio+1, der],
             # descartando la izquierda
-            elif lista[medio] > clave:
+            elif lista[medio] > clave:# se invierte el sentido de menor a mayor para una lista decendente.
                 izquierda = medio + 1
             # sino, sigue buscando en el segmento de la izquierda: [izq, medio-1],
             # descartando la derecha
