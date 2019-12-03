@@ -113,7 +113,8 @@ class QuickSort:
 
 
 def main():
-    DatoAencontrar = random.randint(0,1999)
+    DatoAencontrarA = random.randint(0,1999)
+    DatoAencontrarB = random.randint(0, 1999)
     A = []
     for k in range(2000):
         A.append(random.randint(0, 1999))
@@ -122,22 +123,32 @@ def main():
         B.append(random.randint(0, 1999))
 
 
-
+    # se ordenan las listas A y B
     ordenarLista = QuickSort()
-    print(ordenarLista.ordenar(A))
+    print('lista A: ',ordenarLista.ordenar(A))
 
+    print('lista B: ',ordenarLista.ordenar(B))
 
-
-    #ordenarLista.ordenar(B)
-
-    b = BusquedaBinaria()
-    print(b.BusquedaBinaria(A, DatoAencontrar, 0, len(A)-1))
-    print('el tiempo de ejecucion de la busqueda binaria es de : \f')
+    # se implementa la busqueda de las listas ordenadas buesqueda binaria, lineal.
+    a = BusquedaBinaria()
+    print(a.BusquedaBinaria(A, DatoAencontrarA, 0, len(A)-1))
+    print('el tiempo de ejecucion de la busqueda binaria de la lista A es de : \f')
 
 
     TimeBusquedaSecuencial = BusquedaSecuencial()
-    print(TimeBusquedaSecuencial.busquedaSecuencial(A,DatoAencontrar))
-    print('el tiempo de ejecucion de la busqueda secuencial es de : \f')
+    print(TimeBusquedaSecuencial.busquedaSecuencial(A,DatoAencontrarA))
+    print('el tiempo de ejecucion de la busqueda secuencial de la lista A es de : \f')
+
+    #------------------------------------------------------------------------------------#
+    # se implementa la busqueda de la lista B y se obtiene la complejidad de los algoritmos
+
+    b = BusquedaBinaria()
+    print(b.BusquedaBinaria(B, DatoAencontrarB, 0, len(B) - 1))
+    print('el tiempo de ejecucion de la busqueda binaria de la lista B es de : \f')
+
+    TimeBusquedaSecuencial = BusquedaSecuencial()
+    print(TimeBusquedaSecuencial.busquedaSecuencial(B, DatoAencontrarB))
+    print('el tiempo de ejecucion de la busqueda secuencial de la lista B es de : \f')
 
 
 if __name__ == "__main__":

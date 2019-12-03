@@ -36,9 +36,10 @@ class BusquedaBinaria:
         return -1
 
 def main():
-    A = [8, 13, 17, 26, 44, 56, 88, 97]
+
+    A = [97,88,56,44,26,17,13,8]
     b = BusquedaBinaria()
-    print(b.Busqueda(A, 20, 0, len(A)-1))
+    print(b.Busqueda(A, 44, 0, len(A)-1))
 
 if __name__ == "__main__":
     main()
